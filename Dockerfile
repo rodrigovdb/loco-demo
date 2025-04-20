@@ -18,6 +18,6 @@ COPY . .
 EXPOSE 5150
 
 # Build the dependencies without the actual source code to cache dependencies separately
-# RUN cargo build
+RUN cargo build
 
-# CMD ["rcat", "-h"]
+CMD ["cargo", "loco", "start", "-b", "0.0.0.0"]
