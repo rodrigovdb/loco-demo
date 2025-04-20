@@ -1,3 +1,19 @@
+# Running
+
+```bash
+$ docker-compose up
+```
+
+Running stuff inside the container
+```bash
+$ docker-compose run --rm app bash
+```
+
+Database inside the container
+```bash
+$ psql -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER $POSTGRES_DB
+```
+
 # Welcome to Loco :train:
 
 [Loco](https://loco.rs) is a web and API framework running on Rust.
