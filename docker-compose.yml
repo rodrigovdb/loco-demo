@@ -1,0 +1,21 @@
+networks:
+  default:
+
+services:
+  app:
+    image: loco
+    build: .
+    tty: true
+    stdin_open: true
+    ports:
+      - 5150:5150
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    networks:
+      default:
+        aliases:
+          - loco
